@@ -23,6 +23,13 @@ public class Produk {
     return stok;
     }
 
+    public void setHarga(double Harga){
+        this.harga = harga;
+    }
+    public void setStok(int Stok){
+        this.stok = stok;
+    }
+    
     public void tampilInfo(){
         System.out.println("Produk : " + this.nama);
         System.out.println("harga : " + this.harga);

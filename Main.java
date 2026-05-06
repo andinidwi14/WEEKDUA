@@ -11,5 +11,8 @@ public class Main {
     Hp.tampilInfo();
     Indomie.tampilInfo();
     roti.tampilInfo();
+
+    // --- Overloading hitungPajak() 
+        System.out.println("====== RINCIAN PAJAK ELEKTRONIK ======");
     }
 }

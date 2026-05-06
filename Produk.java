@@ -48,4 +48,4 @@ public class Produk {
         
     public abstract double hitungPajak(double harga);
     }
-
+}

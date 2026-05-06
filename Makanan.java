@@ -21,20 +21,12 @@ public class Makanan extends Produk {
         }
     }
 
-    public void setExpired(int expired, String type) {
-        if (type.equals("Nasi")) {
-            if (expired > 4) {
-                System.out.println("Masa Expired Tidak Boleh Negatif");
-            } else {
-                this.expired = expired;
-            }
-        } else {
-            if (expired < 2) {
-                System.out.println("Masa Expired Tidak Boleh Negatif");
-            } else {
-                this.expired = expired;
-            }
+    //versi 1
+    public double hitungDiskon(int jumlahBeli){
+        if(jumlahBeli >= 10){
+            return hitungTotalHarga(jumlahBeli) * 0.05;
         }
+        return 0;
     }
 
 }

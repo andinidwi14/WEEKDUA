@@ -41,7 +41,7 @@ class Elektronik extends Produk{
 
     @Override
     public double hitungPajak(double harga){
-        retutn harga * 0.28;
+        retutn harga * 0.20;
     }
     
     

@@ -13,6 +13,14 @@ public class Main {
     roti.tampilInfo();
 
     // --- Overloading hitungPajak() 
-        System.out.println("====== RINCIAN PAJAK ELEKTRONIK ======");
+    System.out.println("====== RINCIAN PAJAK ELEKTRONIK ======");
+
+    // Versi 1 - pajak standar
+        double pajakLaptop = Laptop.hitungPajak(1);
+        double totalLaptop = Laptop.hitungHargaSetelahDiskon(1);
+        System.out.println("Laptop x1 (PPN standar 11%)");
+        System.out.println("  Subtotal : Rp" + Laptop.hitungTotalHarga(1));
+        System.out.println("  Pajak    : Rp" + pajakLaptop);
+        System.out.println("  Total    : Rp" + totalLaptop)
     }
 }

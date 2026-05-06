@@ -30,5 +30,9 @@ public class Main {
     System.out.println("  Pajak    : Rp" + pajakHpCustom);
     System.out.println("  Total    : Rp" + (hp.hitungTotalHarga(2) + pajakHpCustom));
 
+    // --- Overloading hitungDiskon()
+     System.out.println("====== RINCIAN DISKON MAKANAN ======");
+
+
     }
 }

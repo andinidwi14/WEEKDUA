@@ -25,6 +25,20 @@ class Elektronik extends Produk{
         System.out.println("Garansi: " + garansiTahun + "Hari" );
         System.out.println("--------");
     }
-   
+    // overloading hitung pajak()
+    // versi 1 pajak standar PPN 11%
+    public double hitungDiskon(int jumlahBeli){
+        return hitungTotalHarga(jumlahBeli)*PPN;
+    }
+    public void setGaransi(int Garansi){
+       if(Garansi <= 0){
+        System.out.println("Masa expired tidak boleh negatif");
+    }else{
+        this.Garansi = Garansi;
+       }
+        
+    }
+    
+}
 
 

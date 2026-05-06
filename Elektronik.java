@@ -1,25 +1,30 @@
-public class Elektronik extends Produk{
-    private int Garansi;
-    public Elektronik (String nama, double harga, int stok, String kategori, int Garansi){
-        super(nama, harga, stok, kategori);
-        this.Garansi = Garansi;
+class Elektronik extends Produk{
+    private String merek;
+    private int garansiTahun;
+    private static final double PPN = 0.11;
 
+    public Elektronik(String nama, String merek, double harga, int stok, int garansiTahun){
+            super(nama,harga,stok);
+            this.merek = merek;
+            this.garansiTahun = garansiTahun;
     }
 
-    public void tampilkanData(){
-        super.tampilInfo();
-        System.out.println("Masa Garansi: " + Garansi + "Hari" );
+    public String getMerek(){
+        return merek;
     }
-
-    public void setGaransi(int Garansi){
-       if(Garansi <= 0){
-        System.out.println("Masa expired tidak boleh negatif");
-    }else{
-        this.Garansi = Garansi;
-       }
-        
+    public int getGaransiTahun(){
+        return garansiTahun;
     }
     
-}
+    @Override
+    public void tampilInfo(){
+        System.out.println("Elektronik");
+        System.out.println("Nama  : " + getnama());
+        // super. tampilInfo
+        System.out.println("Merek   : + merek");
+        System.out.println("Garansi: " + garansiTahun + "Hari" );
+        System.out.println("--------");
+    }
+   
 
 

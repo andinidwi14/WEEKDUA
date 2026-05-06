@@ -33,6 +33,10 @@ public class Main {
     // --- Overloading hitungDiskon()
      System.out.println("====== RINCIAN DISKON MAKANAN ======");
 
-
+    // Versi 1 - diskon otomatis beli >= 10
+    System.out.println("Indomie x10 (diskon otomatis)");
+    System.out.println("  Subtotal : Rp" + Indomie.hitungTotalHarga(10));
+    System.out.println("  Diskon   : Rp" + Indomie.hitungDiskon(10));
+    System.out.println("  Total    : Rp" + Indomie.hitungHargaSetelahDiskon(10));
     }
 }

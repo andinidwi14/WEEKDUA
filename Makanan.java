@@ -41,5 +41,19 @@ public class Makanan extends Produk {
     public double hitungPajak(double harga){
         return harga = 0.10;
     }
-    
+   public void setExpired(int expired, String type) {
+        if (type.equals("Nasi")) {
+            if (expired > 4) {
+                System.out.println("Masa Expired Tidak Boleh Negatif");
+            } else {
+                this.expired = expired;
+            }
+        } else {
+            if (expired < 2) {
+                System.out.println("Masa Expired Tidak Boleh Negatif");
+            } else {
+                this.expired = expired;
+            }
+        }
+    } 
 }

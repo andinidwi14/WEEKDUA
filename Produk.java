@@ -29,6 +29,9 @@ public class Produk {
     public void setStok(int Stok){
         this.stok = stok;
     }
+    public double hitungTotalHarga(int jumlahBeli){
+        return harga * jumlahBeli;
+    }
     
     public void tampilInfo(){
         System.out.println("Produk : " + this.nama);

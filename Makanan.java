@@ -28,3 +28,11 @@ class Makanan extends Produk {
         System.out.println("Kedaluwarsa : " + kedaluwarsa);
         System.out.println("----------");
     }
+    // OVERLOADING hitungDiskon()
+    // Versi 1 = diskon otomatis jika beli >= 10
+    public double hitungDiskon(int jumlahBeli) {
+        if (jumlahBeli >= 10) {
+            return hitungTotalHarga(jumlahBeli) * 0.05;
+        }
+        return 0;
+    }

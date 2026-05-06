@@ -29,9 +29,14 @@ public class Produk {
     public void setStok(int Stok){
         this.stok = stok;
     }
-    public double hitungTotalHarga(int jumlahBeli){
+    public double htungTotalHarga(int jumlahBeli){
         return harga * jumlahBeli;
     }
+    public void beli(int jumlahBeli){
+        if(jumlahBeli <= 0){
+            System.out.println("Jumlah beli harus lebih dari 0");
+            return;
+        }
     
     public void tampilInfo(){
         System.out.println("Produk : " + this.nama);

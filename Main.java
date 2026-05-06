@@ -38,5 +38,11 @@ public class Main {
     System.out.println("  Subtotal : Rp" + Indomie.hitungTotalHarga(10));
     System.out.println("  Diskon   : Rp" + Indomie.hitungDiskon(10));
     System.out.println("  Total    : Rp" + Indomie.hitungHargaSetelahDiskon(10));
+
+    // Versi 2  diskon custom 15% (misal promo spesial)
+    System.out.println("\nRoti x5 (diskon custom 15%)");
+    System.out.println("  Subtotal : Rp" + roti.hitungTotalHarga(5));
+    System.out.println("  Diskon   : Rp" + roti.hitungDiskon(5, 15));
+    System.out.println("  Total    : Rp" + (roti.hitungTotalHarga(5) - roti.hitungDiskon(5, 15)));
     }
 }

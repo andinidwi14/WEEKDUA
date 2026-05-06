@@ -37,12 +37,15 @@ public class Produk {
             System.out.println("Jumlah beli harus lebih dari 0");
             return;
         }
-    
-    public void tampilInfo(){
-        System.out.println("Produk : " + this.nama);
-        System.out.println("harga : " + this.harga);
-        System.out.println("stok : " + this.stok);
-        System.out.println("kategori : " + this.kategori);
-
+     if(jumlahBeli > stok){
+            System.out.println("Stok: " + nama + " tidak cukup! Tersisa: " + stok);
+            return;
+        }
+    stok -= jumlahBeli;
+        System.out.println("Stok " + nama + " x" + jumlahBeli + " = Rp" + hitungTotalHarga(jumlahBeli) + " | Sisa stok: " + stok);
     }
-}
+    public void tampilInfo(){
+        
+    public abstract double hitungPajak(double harga);
+    }
+

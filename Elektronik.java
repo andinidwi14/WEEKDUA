@@ -30,14 +30,20 @@ class Elektronik extends Produk{
     public double hitungDiskon(int jumlahBeli){
         return hitungTotalHarga(jumlahBeli)*PPN;
     }
-    public void setGaransi(int Garansi){
-       if(Garansi <= 0){
-        System.out.println("Masa expired tidak boleh negatif");
-    }else{
-        this.Garansi = Garansi;
-       }
-        
+
+    //versi 2 pajak dengan persentase custom
+    public double hitungDiskon(int jumlahBeli){
+        return hitungTotalHarga(jumlahBeli)* (persenPajak/100);
     }
+    public doble hitungHargaSetelahPajak(int jumlahBeli){
+        return hitungTotalHarga(jumlahBeli) + hitungPajak(jumlahBeli);
+    }
+
+    @Override
+    public double hitungPajak(double harga){
+        retutn harga * 0.28;
+    }
+    
     
 }
 
